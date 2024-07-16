@@ -1,0 +1,473 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #dedede;
+    width: 100%;
+}
+
+/* header section  */
+header {
+    display: flex;
+    align-items: center;
+    background-color: #16bcd9;
+}
+ #header {
+    margin: 25px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+ /* main section  */
+ main {
+    height: 75vh;
+ }
+
+ /* input section */
+ #input-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 15px;
+ }
+
+ #input-field {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 12px;
+    border: none;
+    width: 30rem;
+ }
+
+ .btn {
+    margin: 5px;
+    border-radius: 5px;
+    padding: 12px;
+    border: none;
+    background-color: #16bcd9;
+    color: #ffffff;
+    width: 7rem;
+ }
+
+ /* book section  */
+#result-section {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.book {
+   position: relative;
+   height: 450px;
+   width: 350px;
+   transition-duration: 1s;
+}
+
+.front, .back {
+   background-color: #1698d9; 
+   height: 100%;
+   width: 100%;
+   border-radius: 0 15px 15px 0;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   box-shadow: 0 2px 2px #00000050;
+}
+
+.front {
+   position: absolute;
+   z-index: 2;
+   transform-origin: center left;
+   transition: transform 1s;
+}
+
+.front-title {
+   color: white;
+   font-size: 3rem;
+   margin-bottom: 200px;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+   user-select: none; /* this is to prevent the user from highlighting or selecting the title in the book cover */
+}
+
+/* page section inside of book */
+.page {
+   z-index: 1;
+   background-color: #ffffff;
+   position: absolute;
+   height: 430px;
+   width: 330px;
+   border-radius: 0 15px 15px 0;
+   margin-top: 10px;
+
+   display: flex;
+   flex-direction: column;
+}
+
+.searchResult, .phonetics, .meaning {
+   margin : 8px 20px 0 20px;
+}
+
+.searchResult {
+   color: black;
+   font-size: 3rem;
+   font-family: "Roboto", sans-serif;
+   font-weight: 400;
+   font-style: normal;
+}
+
+.meaning {
+   text-align: justify;
+}
+
+/* buttons inside of the page */
+.page-btn {
+   display: flex;
+   justify-content: center;
+   align-items: flex-end;
+}
+
+#read-btn, #close-btn {
+   margin: 20px;
+   padding: 15px;
+   border-radius: 5px;
+   border: none;
+   width: 7rem;
+   background-color: #1698d9;
+   color: #ffffff;
+}
+
+.back {
+   position: relative;
+   z-index: -1;
+}
+
+ /* footer section  */
+ footer {
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    background-color: #16bcd9;
+ }
+
+ #footer {
+    margin: 30px;
+    color: #ffffff;
+    font-family: "Roboto", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+ }
+
+
+ @media only screen and (max-width: 480px) {
+  
+   header {
+      width: 108vw;
+      display: flex;
+      align-items: center;
+      background-color: #16bcd9;
+  }
+   #header {
+      margin: 15px;
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+   }
+  
+   /* main section  */
+   main {
+      height: 85vh;
+      width: 100vw;
+      overflow: hidden;
+   }
+  
+   /* input section */
+   #input-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 15px;
+   }
+  
+   #input-field {
+      border-radius: 5px;
+      padding: 7px;
+      border: none;
+      width: 25rem;
+   }
+  
+   .btn {
+      border-radius: 5px;
+      padding: 8px;
+      border: none;
+      background-color: #16bcd9;
+      color: #ffffff;
+      width: 6rem;
+   }
+  
+  #result-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  
+  .book {
+     position: relative;
+     height: 360px;
+     width: 210px;
+     transition-duration: 1s;
+  }
+  
+  .front, .back {
+     background-color: #1698d9; 
+     height: 100%;
+     width: 100%;
+     border-radius: 0 15px 15px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 2px 2px #00000050;
+  }
+  
+  .front {
+     position: absolute;
+     z-index: 2;
+     transform-origin: center left;
+     transition: transform 1s;
+  }
+  
+  .front-title {
+     color: white;
+     font-size: 2.5rem;
+     margin-bottom: 200px;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     user-select: none; /* this is to prevent the user from highlighting or selecting the title in the book cover */
+  }
+
+  .page {
+     z-index: 1;
+     background-color: #ffffff;
+     position: absolute;
+     height: 340px;
+     width: 200px;
+     border-radius: 0 15px 15px 0;
+     margin-top: 10px;
+  
+     display: flex;
+     flex-direction: column;
+  }
+  
+  .searchResult, .phonetics, .meaning {
+     margin : 8px 20px 0 20px
+  }
+  
+  .searchResult {
+     color: black;
+     font-size: 1.5rem;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+  }
+  
+  .page-btn {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+  }
+  
+  #read-btn, #close-btn {
+     margin: 20px;
+     padding: 15px;
+     border-radius: 5px;
+     border: none;
+     width: 7rem;
+     background-color: #1698d9;
+     color: #ffffff;
+  }
+  
+  .back {
+     position: relative;
+     z-index: -1;
+  }
+  
+   /* footer section  */
+   footer {
+      display: flex;
+      justify-content:center ;
+      align-items: center;
+      background-color: #16bcd9;
+      width: 108vw;
+   }
+  
+   #footer {
+      margin: 30px;  
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: no
+ }
+}
+
+@media only screen and (max-width: 768px) {
+  
+   header {
+      width: 108vw;
+      display: flex;
+      align-items: center;
+      background-color: #16bcd9;
+  }
+   #header {
+      margin: 15px;
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: normal;
+   }
+  
+   /* main section  */
+   main {
+      height: 85vh;
+      width: 100vw;
+      overflow: hidden;
+   }
+  
+   /* input section */
+   #input-section {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin: 15px;
+   }
+  
+   #input-field {
+      border-radius: 5px;
+      padding: 7px;
+      border: none;
+      width: 25rem;
+   }
+  
+   .btn {
+      border-radius: 5px;
+      padding: 8px;
+      border: none;
+      background-color: #16bcd9;
+      color: #ffffff;
+      width: 6rem;
+   }
+  
+  #result-section {
+     display: flex;
+     justify-content: center;
+     align-items: center;
+  }
+  
+  .book {
+     position: relative;
+     height: 360px;
+     width: 210px;
+     transition-duration: 1s;
+  }
+  
+  .front, .back {
+     background-color: #1698d9; 
+     height: 100%;
+     width: 100%;
+     border-radius: 0 15px 15px 0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     box-shadow: 0 2px 2px #00000050;
+  }
+  
+  .front {
+     position: absolute;
+     z-index: 2;
+     transform-origin: center left;
+     transition: transform 1s;
+  }
+  
+  .front-title {
+     color: white;
+     font-size: 2.5rem;
+     margin-bottom: 200px;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+     user-select: none; /* this is to prevent the user from highlighting or selecting the title in the book cover */
+  }
+
+  .page {
+     z-index: 1;
+     background-color: #ffffff;
+     position: absolute;
+     height: 340px;
+     width: 200px;
+     border-radius: 0 15px 15px 0;
+     margin-top: 10px;
+  
+     display: flex;
+     flex-direction: column;
+  }
+  
+  .searchResult, .phonetics, .meaning {
+     margin : 8px 20px 0 20px
+  }
+  
+  .searchResult {
+     color: black;
+     font-size: 1.5rem;
+     font-family: "Roboto", sans-serif;
+     font-weight: 400;
+     font-style: normal;
+  }
+  
+  .page-btn {
+     display: flex;
+     justify-content: center;
+     align-items: flex-end;
+  }
+  
+  #read-btn, #close-btn {
+     margin: 20px;
+     padding: 15px;
+     border-radius: 5px;
+     border: none;
+     width: 7rem;
+     background-color: #1698d9;
+     color: #ffffff;
+  }
+  
+  .back {
+     position: relative;
+     z-index: -1;
+  }
+  
+   /* footer section  */
+   footer {
+      display: flex;
+      justify-content:center ;
+      align-items: center;
+      background-color: #16bcd9;
+      width: 108vw;
+   }
+  
+   #footer {
+      margin: 30px;  
+      color: #ffffff;
+      font-family: "Roboto", sans-serif;
+      font-weight: 400;
+      font-style: no
+ }
+}
+

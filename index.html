@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- meta data for SEO  -->
+     <meta name="author" content="Raniel Cyrus Echon">
+     <meta name="keywords" content="JS, Javascript, HTML, CSS, Web Dev, Web Developer, API, Full stack, MERN stack">
+     <meta name="description" content="JS Application Project with APIs and AI">
+    <title>Cyrus Project 2</title>
+    <!-- links for icon tab, css and js -->
+    <link rel="icon" href="assets/cyrus-logo.png">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <!-- links for google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+    <!-- header section -->
+    <header>
+        <h1 id="header">Dictionary App</h1>
+    </header>
+
+    <main>
+        <!-- input section -->
+        <section id="input-section">
+            <div id="search">
+                <input id="input-field"type="text" placeholder="Enter a Word">
+            </div>
+            <button class="btn">Search</button>
+        </section>
+
+        <!-- result section -->
+        <section id="result-section">
+            <div class="book">
+                <div class="front">
+                    <span class="front-title">Dictionary</span>
+                </div>
+                <div class="page" id="page-1">
+                    <p class="searchResult"></p>
+                    <p class="phonetics"></p>
+                    <p class="meaning"></p>
+                    <div class = "page-btn">
+                        <button id="read-btn">Read</button>
+                        <button id="close-btn">Close</button>
+                    </div>
+                </div>
+                <div class="back"></div>
+            </div>
+        </section>
+    </main>
+
+    <!-- footer section -->
+    <footer>
+        <span id="footer">&copy;Raniel Cyrus Echon</span>
+    </footer>
+</body>
+</html>
